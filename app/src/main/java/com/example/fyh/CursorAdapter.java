@@ -31,7 +31,6 @@ public class CursorAdapter extends android.widget.CursorAdapter
         TextView tv = (TextView) view ;
         tv.setText(cursor.getString(cursor.getColumnIndex(DbAdapter.C_NOMBRE)));
 
-
     }
 
     @Override

@@ -13,8 +13,7 @@
     <TextView
         android:id="@id/android:empty"
         android:layout_width="match_parent"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:text="@string/lista_vacia"/>
+        android:text="@string/lista_vacia" />
 
 </LinearLayout>

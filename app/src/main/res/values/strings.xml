@@ -96,10 +96,16 @@
     </string>
     <string-array name="tipos">
         <item>Curioso</item>
-        <item>cultural</item>
+        <item>Cultural</item>
         <item>Sol y playa</item>
-        <item>religioso</item>
-        <item>turismo de noche</item>
+        <item>Religioso</item>
+        <item>Turismo de noche</item>
+        <item>Shopping</item>
+        <item>Depotivo</item>
+        <item>Salud</item>
+        <item>Rural</item>
+        <item>Festival</item>
+        <item>Eventos</item>
     </string-array>
     <string name="lista_vacia">sin datos</string>
     <string name="action_settings">Settings</string>
