@@ -28,16 +28,17 @@ public class DbAdapter extends Resultados {
     public static final String C_DESCRIPCION = "d_descripcion";
     public static final String C_DESCRIPTION = "d_description";
     public static final String C_LOCALIZACION = "d_localizacion";
+    public static final String C_TIPOTUR = "d_tipo_turismo";
     private Context contexto;
     private DbHelper dbHelper;
     private SQLiteDatabase db;
-    String seleccion =  C_COMPANIA + " = ?" + " AND " + C_TIPO + " = ?" + " AND " + C_PRECIO + " = ?" + " AND " + C_AFLUENCIA + " = ?";
+    String seleccion =  C_COMPANIA + " = ?" + " AND " + C_TIPO + " = ?" + " AND " + C_PRECIO + " = ?" + " AND " + C_AFLUENCIA + " = ?" + " AND " + C_TIPOTUR + " = ?";
 
 
     /**
      * Definimos lista de columnas de la tabla para utilizarla en las consultas a la base de datos
      */
-    private String[] columnas = new String[]{  C_ID, C_NOMBRE, C_COMPANIA, C_TIPO, C_PRECIO, C_AFLUENCIA, C_FECHA, C_DESCRIPCION, C_DESCRIPTION, C_LOCALIZACION} ;
+    private String[] columnas = new String[]{  C_ID, C_NOMBRE, C_COMPANIA, C_TIPO, C_PRECIO, C_AFLUENCIA, C_FECHA, C_DESCRIPCION, C_DESCRIPTION, C_LOCALIZACION, C_TIPOTUR} ;
 
     public DbAdapter(Context context )
     {
@@ -62,10 +63,10 @@ public class DbAdapter extends Resultados {
      * Devuelve cursor con todas las columnas de la tabla
      *
      */
-    public Cursor getCursor(String com, String tip, String pre, String afl) throws SQLException
+    public Cursor getCursor(String com, String tip, String pre, String afl, String Tipot) throws SQLException
     {
 
-        String seleccionArgs[] = new String []{ com,tip, pre, afl};
+        String seleccionArgs[] = new String []{ com,tip, pre, afl, Tipot};
         Cursor c = db.query( true, C_TABLA, columnas, seleccion , seleccionArgs, null, null, null, null);
         return c;
     }

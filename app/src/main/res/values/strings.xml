@@ -97,9 +97,9 @@
     <string-array name="tipos">
         <item>Curioso</item>
         <item>cultural</item>
-        <item>solyplaya</item>
+        <item>Sol y playa</item>
         <item>religioso</item>
-        <item>turismodenoche</item>
+        <item>turismo de noche</item>
     </string-array>
     <string name="lista_vacia">sin datos</string>
     <string name="action_settings">Settings</string>

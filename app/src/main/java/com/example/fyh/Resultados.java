@@ -15,6 +15,8 @@ public class Resultados extends ListActivity {
     private String v_tipo;
     private String v_precio;
     private String v_afluencia;
+    private String v_TipoTur;
+
     private String[]Botones;
 
     private DbAdapter dbAdapter;
@@ -37,8 +39,9 @@ public class Resultados extends ListActivity {
         v_tipo= getIntent().getExtras().getString("b_tipo");
         v_precio= getIntent().getExtras().getString("b_precio");
         v_afluencia= getIntent().getExtras().getString("b_afluencia");
+        v_TipoTur= getIntent().getExtras().getString("TipoTur");
         //Botones=getIntent().getExtras().getStringArray("botones");
-        consultar(v_compañia, v_tipo, v_precio,v_afluencia);
+        consultar(v_compañia, v_tipo, v_precio,v_afluencia,v_TipoTur);
 
         /*
          * Declaramos el controlador de la BBDD y accedemos en modo escritura
@@ -49,14 +52,16 @@ public class Resultados extends ListActivity {
 
         Toast.makeText(getBaseContext(), "Base de datos preparada", LENGTH_LONG).show();
 
+        Toast.makeText(getBaseContext(), v_TipoTur, LENGTH_LONG).show();
+
     }
 
 
 
 
-    private void consultar( String com, String tip, String pre, String afl)
+    private void consultar( String com, String tip, String pre, String afl, String Tipot)
     {
-        cursor = dbAdapter.getCursor(com, tip, pre, afl);
+        cursor = dbAdapter.getCursor(com, tip, pre, afl, Tipot);
         startManagingCursor(cursor);
         destinoAdapter = new CursorAdapter(this, cursor);
         lista.setAdapter(destinoAdapter);

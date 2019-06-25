@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 
 public class OpcionesRadioButton extends AppCompatActivity {
 
@@ -32,6 +33,7 @@ public class OpcionesRadioButton extends AppCompatActivity {
                 intent.putExtra("b_tipo", BotonesTipo() );
                 intent.putExtra("b_precio", BotonesPrecio() );
                 intent.putExtra("b_afluencia", BotonesAfluencia() );
+                intent.putExtra("TipoTur", Spinneropcion() );
                 startActivityForResult(intent, 0);
 
             }
@@ -153,5 +155,12 @@ public class OpcionesRadioButton extends AppCompatActivity {
         if (alta.isChecked())
             afluencia= "Alta";
         return afluencia;
+    }
+
+    public String Spinneropcion(){
+        Spinner Tipotur= (Spinner) findViewById(R.id.TipoDeTurismo);
+        String spinnerText= Tipotur.getSelectedItem().toString();
+
+        return spinnerText;
     }
 }
