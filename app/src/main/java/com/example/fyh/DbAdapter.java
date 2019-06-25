@@ -23,9 +23,11 @@ public class DbAdapter extends Resultados {
     public static final String C_COMPANIA = "d_compania";
     public static final String C_TIPO = "d_tipo";
     public static final String C_PRECIO = "d_precio";
-    public static final String C_AFLUENCIA = "d_aflu";
+    public static final String C_AFLUENCIA = "d_afluencia";
     public static final String C_FECHA = "d_fecha";
     public static final String C_DESCRIPCION = "d_descripcion";
+    public static final String C_DESCRIPTION = "d_description";
+    public static final String C_LOCALIZACION = "d_localizacion";
     private Context contexto;
     private DbHelper dbHelper;
     private SQLiteDatabase db;
@@ -35,7 +37,7 @@ public class DbAdapter extends Resultados {
     /**
      * Definimos lista de columnas de la tabla para utilizarla en las consultas a la base de datos
      */
-    private String[] columnas = new String[]{  C_ID, C_NOMBRE}; //C_COMPANIA, C_TIPO, C_PRECIO, C_AFLUENCIA, C_FECHA, C_DESCRIPCION} ;
+    private String[] columnas = new String[]{  C_ID, C_NOMBRE, C_COMPANIA, C_TIPO, C_PRECIO, C_AFLUENCIA, C_FECHA, C_DESCRIPCION, C_DESCRIPTION, C_LOCALIZACION} ;
 
     public DbAdapter(Context context )
     {

@@ -85,13 +85,13 @@ public class OpcionesRadioButton extends AppCompatActivity {
         RadioButton pareja= (RadioButton) findViewById(R.id.pareja);
         RadioButton familia= (RadioButton) findViewById(R.id.familia);
         if (solo.isChecked())
-            compañia= "solo";
+            compañia= "Sol@";
         if (pareja.isChecked())
-            compañia= "pareja";
+            compañia= "Pareja";
         if (familia.isChecked())
-            compañia= "familia";
+            compañia= "Familia";
         if (amigos.isChecked())
-            compañia= "amigos";
+            compañia= "Amigos";
         return compañia;
     }
 
@@ -105,9 +105,9 @@ public class OpcionesRadioButton extends AppCompatActivity {
         RadioButton interior = (RadioButton) findViewById(R.id.interior);
 
         if (costa.isChecked())
-            tipo= "costa";
+            tipo= "Costa";
         if (interior.isChecked())
-            tipo= "interior";
+            tipo= "Interior";
 
         return tipo;
     }
@@ -147,11 +147,11 @@ public class OpcionesRadioButton extends AppCompatActivity {
         RadioButton alta = (RadioButton) findViewById(R.id.alta);
 
         if (baja.isChecked())
-            afluencia= "baja";
+            afluencia= "Baja";
         if (media.isChecked())
-            afluencia= "media";
+            afluencia= "Media";
         if (alta.isChecked())
-            afluencia= "alta";
+            afluencia= "Alta";
         return afluencia;
     }
 }
