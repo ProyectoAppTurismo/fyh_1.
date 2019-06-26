@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import static android.widget.Toast.LENGTH_LONG;
 
@@ -23,15 +24,15 @@ public class Resultados extends ListActivity {
     private Cursor cursor;
     private CursorAdapter destinoAdapter ;
     private ListView lista;
+    private TextView nombreView;
+    private TextView descView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultados);
 
-
         lista = (ListView) findViewById(android.R.id.list);
-
         dbAdapter = new DbAdapter(this);
         dbAdapter.abrir();
 
@@ -50,9 +51,9 @@ public class Resultados extends ListActivity {
 
         SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-        Toast.makeText(getBaseContext(), "Base de datos preparada", LENGTH_LONG).show();
-
         Toast.makeText(getBaseContext(), v_TipoTur, LENGTH_LONG).show();
+
+        //Toast.makeText(getBaseContext(), "Base de datos preparada", LENGTH_LONG).show();
 
     }
 
@@ -65,6 +66,7 @@ public class Resultados extends ListActivity {
         startManagingCursor(cursor);
         destinoAdapter = new CursorAdapter(this, cursor);
         lista.setAdapter(destinoAdapter);
+
     }
 
     @Override

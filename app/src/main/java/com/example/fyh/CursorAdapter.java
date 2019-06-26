@@ -6,11 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static android.widget.Toast.LENGTH_LONG;
 
 public class CursorAdapter extends android.widget.CursorAdapter
 {
 
-    private DbAdapter dbAdapter = null ; //Creamos el objeto DbAdapter
+    private DbAdapter dbAdapter; //Creamos el objeto DbAdapter
 
     /**
      * Constructor CursorAdapter
@@ -29,15 +32,15 @@ public class CursorAdapter extends android.widget.CursorAdapter
     {
 
         TextView tv = (TextView) view ;
-        tv.setText(cursor.getString(cursor.getColumnIndex(DbAdapter.C_NOMBRE)));
-
+        tv.setText(cursor.getString(cursor.getColumnIndex(DbAdapter.C_DESCRIPCION)));
+ 
     }
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent)
     {
         final LayoutInflater inflater = LayoutInflater.from(context);
-        final View view = inflater.inflate(android.R.layout.simple_dropdown_item_1line, parent, false);
+        final View view = inflater.inflate(android.R.layout.simple_expandable_list_item_1, parent, false);
 
         return view;
     }
