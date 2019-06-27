@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OpcionesIngles">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="397dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="68dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:paddingLeft="20dp"
+                        android:text="With whom are you traveling?"
+                        android:textSize="30sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="215dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="129dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/single"
+                        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:checked="true"
+                        android:clickable="true"
+                        android:cursorVisible="true"
+                        android:focusable="auto"
+                        android:paddingLeft="20dp"
+                        android:text="Single"
+                        android:textSize="24sp"
+                        android:visibility="visible"
+                        tools:visibility="visible" />
+
+                    <RadioButton
+                        android:id="@+id/partner"
+                        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:bufferType="normal"
+                        android:button="@android:drawable/btn_radio"
+                        android:checked="false"
+                        android:paddingLeft="20dp"
+                        android:text="Partner"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/family"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:checked="false"
+                        android:paddingLeft="20dp"
+                        android:text="Family"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/friends"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:checked="false"
+                        android:cursorVisible="false"
+                        android:duplicateParentState="false"
+                        android:paddingLeft="20dp"
+                        android:text="Friends"
+                        android:textSize="24sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:paddingLeft="20dp"
+                    android:text="Type of destination?"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="144dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/interior"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:checked="true"
+                        android:paddingLeft="20dp"
+                        android:text="Interior"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/coast"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:paddingLeft="20dp"
+                        android:text="Coast"
+                        android:textSize="24sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="20dp"
+                    android:paddingLeft="20dp"
+                    android:text="Price"
+                    android:textSize="30sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="147dp">
+
+                    <RadioButton
+                        android:id="@+id/lowPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:checked="true"
+                        android:paddingLeft="20dp"
+                        android:text="€"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/halfPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:paddingLeft="20dp"
+                        android:text="€€"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/highPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:paddingLeft="20dp"
+                        android:text="€€€"
+                        android:textSize="24sp" />
+
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:paddingLeft="20dp"
+                    android:text="Affluence"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="119dp"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RadioButton
+                        android:id="@+id/low"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:checked="true"
+                        android:paddingLeft="20dp"
+                        android:text="Low"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/average"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@android:drawable/btn_radio"
+                        android:paddingLeft="20dp"
+                        android:text="Average"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/high"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="20dp"
+                        android:text="High"
+                        android:textSize="24sp"
+                        android:button="@android:drawable/btn_radio" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:orientation="vertical">
+
+                <Spinner
+                    android:id="@+id/typeOfTourism"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:entries="@array/tipos"
+                    android:paddingLeft="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="160dp"
+                    android:layout_marginRight="160dp"
+                    android:layout_marginBottom="136dp"
+                    android:text="NEXT"
+                    app:layout_constraintBottom_toTopOf="@+id/nav_view"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.987"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -49,5 +49,17 @@ public class PantallaInicio extends AppCompatActivity {
 
             }
         });
+        Button btn2 = (Button) findViewById(R.id.start);
+        btn2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(view.getContext(), OpcionesIngles.class);
+                startActivityForResult(intent2, 0);
+
+            }
+        });
+
+
+
     }
 }
