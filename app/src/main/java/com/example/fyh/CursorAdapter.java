@@ -32,16 +32,20 @@ public class CursorAdapter extends android.widget.CursorAdapter
     {
 
         TextView tv = (TextView) view ;
-        tv.setText(cursor.getString(cursor.getColumnIndex(DbAdapter.C_DESCRIPCION)));
- 
+
+        String nombre = cursor.getString(cursor.getColumnIndex(DbAdapter.C_NOMBRE));
+        String descripcion = cursor.getString(cursor.getColumnIndex(DbAdapter.C_DESCRIPCION));
+        String resultado = nombre + "\n" + descripcion;
+
+        tv.setText(resultado);
     }
 
     @Override
     public View newView(Context context, Cursor cursor, ViewGroup parent)
     {
         final LayoutInflater inflater = LayoutInflater.from(context);
-        final View view = inflater.inflate(android.R.layout.simple_expandable_list_item_1, parent, false);
-
+        final View view = inflater.inflate(android.R.layout.simple_list_item_activated_1, parent, false);
+        view.setMinimumHeight(200);
         return view;
     }
 }
