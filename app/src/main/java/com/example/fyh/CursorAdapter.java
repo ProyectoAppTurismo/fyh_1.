@@ -2,6 +2,8 @@ package com.example.fyh;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.text.Html;
+import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +16,7 @@ public class CursorAdapter extends android.widget.CursorAdapter
 {
 
     private DbAdapter dbAdapter; //Creamos el objeto DbAdapter
+    private Html.TagHandler http;
 
     /**
      * Constructor CursorAdapter
@@ -37,7 +40,11 @@ public class CursorAdapter extends android.widget.CursorAdapter
         String descripcion = cursor.getString(cursor.getColumnIndex(DbAdapter.C_DESCRIPCION));
         String resultado = nombre + "\n" + descripcion;
 
-        tv.setText(resultado);
+        //tv.setText(resultado);
+        tv.setText(
+                Html.fromHtml("<strong>" + nombre +"</strong>:<br>" +resultado));
+
+
     }
 
     @Override
@@ -46,6 +53,7 @@ public class CursorAdapter extends android.widget.CursorAdapter
         final LayoutInflater inflater = LayoutInflater.from(context);
         final View view = inflater.inflate(android.R.layout.simple_list_item_activated_1, parent, false);
         view.setMinimumHeight(200);
+        view.setClickable(true);
         return view;
     }
 }
