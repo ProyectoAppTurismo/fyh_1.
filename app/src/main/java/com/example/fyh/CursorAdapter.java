@@ -3,6 +3,7 @@ package com.example.fyh;
 import android.content.Context;
 import android.database.Cursor;
 import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,15 +35,16 @@ public class CursorAdapter extends android.widget.CursorAdapter
     public void bindView(View view, Context context, Cursor cursor)
     {
 
-        TextView tv = (TextView) view ;
-
+        TextView tv = (TextView) view;
+        tv.setMovementMethod(LinkMovementMethod.getInstance());
         String nombre = cursor.getString(cursor.getColumnIndex(DbAdapter.C_NOMBRE));
         String descripcion = cursor.getString(cursor.getColumnIndex(DbAdapter.C_DESCRIPCION));
-        String resultado = nombre + "\n" + descripcion;
+        String resultado = "<html><strong>" +nombre +"</strong>:<br>" + descripcion +
+                "<br><a href=\"https://www.w3schools.com/\" style=\"color:#1240AB\";\"text-decoration:none\";>INFO</a></html>";
 
         //tv.setText(resultado);
         tv.setText(
-                Html.fromHtml("<strong>" + nombre +"</strong>:<br>" +resultado));
+                Html.fromHtml(resultado));
 
 
     }
