@@ -24,10 +24,11 @@ public class OpcionesRadioButton extends AppCompatActivity {
 
         Button btn = (Button) findViewById(R.id.siguiente);
 
+
         btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                //String botones[]=new String[]{BotonesCompañia(),BotonesTipo(),BotonesPrecio(),BotonesAfluencia()};
+
                 Intent intent = new Intent(view.getContext(), Resultados.class);
                 intent.putExtra("b_compañia", BotonesCompañia() );
                 intent.putExtra("b_tipo", BotonesTipo() );
@@ -39,19 +40,6 @@ public class OpcionesRadioButton extends AppCompatActivity {
             }
         });
 
-
-
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
-
-        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        //fab.setOnClickListener(new View.OnClickListener() {
-            //@Override
-           // public void onClick(View view) {
-             //   Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-               //         .setAction("Action", null).show();
-          //  }
-        //});
     }
 
     @Override

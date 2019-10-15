@@ -42,6 +42,7 @@ public class Resultados extends ListActivity {
         v_afluencia= getIntent().getExtras().getString("b_afluencia");
         v_TipoTur= getIntent().getExtras().getString("TipoTur");
         //Botones=getIntent().getExtras().getStringArray("botones");
+
         consultar(v_compañia, v_tipo, v_precio,v_afluencia,v_TipoTur);
 
         /*

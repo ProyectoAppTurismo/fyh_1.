@@ -8,10 +8,9 @@
 
     <ListView
         android:id="@android:id/list"
-        android:autoLink="web"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        />
+        android:layout_height="462dp"
+        android:autoLink="web" />
 
     <TextView
         android:id="@android:id/empty"
@@ -20,5 +19,16 @@
         android:textColor="#00FF00"
         android:text="@string/lista_vacia"
         />
+
+    <Button
+        android:id="@+id/maps"
+        android:layout_width="220dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="140dp"
+        android:text="MAPS" />
 
 </LinearLayout>

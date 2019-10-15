@@ -8,6 +8,7 @@ import android.text.util.Linkify;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,9 +41,8 @@ public class CursorAdapter extends android.widget.CursorAdapter
         String nombre = cursor.getString(cursor.getColumnIndex(DbAdapter.C_NOMBRE));
         String descripcion = cursor.getString(cursor.getColumnIndex(DbAdapter.C_DESCRIPCION));
         String resultado = "<html><strong>" +nombre +"</strong>:<br>" + descripcion +
-                "<br><a href=\"https://www.w3schools.com/\" style=\"color:#1240AB\";\"text-decoration:none\";>INFO</a></html>";
-
-        //tv.setText(resultado);
+                "<br><a href=\"https://www.google.es/maps/place/"+nombre+"\" style=\"color:#1240AB\";\"text-decoration:none\";>INFO</a></html>";
+        
         tv.setText(
                 Html.fromHtml(resultado));
 
