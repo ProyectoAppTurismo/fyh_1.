@@ -20,15 +20,4 @@
         android:text="@string/lista_vacia"
         />
 
-    <Button
-        android:id="@+id/maps"
-        android:layout_width="220dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="68dp"
-        android:layout_marginLeft="68dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="140dp"
-        android:text="MAPS" />
-
 </LinearLayout>

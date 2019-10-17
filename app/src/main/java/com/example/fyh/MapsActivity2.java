@@ -11,15 +11,14 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity2 extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.activity_maps2);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -41,18 +40,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng toledo = new LatLng(39.8621882,-4.0694706);
-        mMap.addMarker(new MarkerOptions().position(toledo).title("Toledo"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(toledo));
-
-        // Add a marker in Sydney and move the camera
-        LatLng madrid = new LatLng(40.4378698,-3.8196233);
-        mMap.addMarker(new MarkerOptions().position(madrid).title("Madrid"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(madrid));
-
-        // Add a marker in Sydney and move the camera
-        LatLng valladolid = new LatLng(41.7031684,-4.9488985);
-        mMap.addMarker(new MarkerOptions().position(valladolid).title("Valladolid"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(valladolid));
+        LatLng sydney = new LatLng(-34, 151);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }

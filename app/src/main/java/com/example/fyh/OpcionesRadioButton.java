@@ -22,6 +22,16 @@ public class OpcionesRadioButton extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
 
+        Button botonMaps = (Button) findViewById(R.id.maps);
+        botonMaps.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(view.getContext(), MapsActivity.class);
+                startActivityForResult(intent2, 0);
+
+            }
+        });
+
         Button btn = (Button) findViewById(R.id.siguiente);
 
 
