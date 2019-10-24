@@ -20,22 +20,15 @@ public class Resultados extends ListActivity {
     private String v_precio;
     private String v_afluencia;
     private String v_TipoTur;
-
-    private String[]Botones;
-
     private DbAdapter dbAdapter;
     private Cursor cursor;
     private CursorAdapter destinoAdapter ;
     private ListView lista;
-    private TextView nombreView;
-    private TextView descView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultados);
-
-
 
         lista = (ListView) findViewById(android.R.id.list);
         dbAdapter = new DbAdapter(this);
@@ -59,7 +52,7 @@ public class Resultados extends ListActivity {
 
         Toast.makeText(getBaseContext(), v_TipoTur, LENGTH_LONG).show();
 
-        //Toast.makeText(getBaseContext(), "Base de datos preparada", LENGTH_LONG).show();
+        dbAdapter.cerrar();
 
     }
 
@@ -81,5 +74,7 @@ public class Resultados extends ListActivity {
         getMenuInflater().inflate(R.menu.destino, menu);
         return true;
     }
+
+
 }
 

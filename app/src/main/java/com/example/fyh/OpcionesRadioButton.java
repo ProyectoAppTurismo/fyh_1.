@@ -50,6 +50,21 @@ public class OpcionesRadioButton extends AppCompatActivity {
             }
         });
 
+        botonMaps.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(view.getContext(), MapsActivity.class);
+                intent.putExtra("b_compañia", BotonesCompañia() );
+                intent.putExtra("b_tipo", BotonesTipo() );
+                intent.putExtra("b_precio", BotonesPrecio() );
+                intent.putExtra("b_afluencia", BotonesAfluencia() );
+                intent.putExtra("TipoTur", Spinneropcion() );
+                startActivityForResult(intent, 0);
+
+            }
+        });
+
     }
 
     @Override

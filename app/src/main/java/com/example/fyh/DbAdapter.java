@@ -7,9 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 public class DbAdapter extends Resultados {
 
-    private DbAdapter dbAdapter = null ;
-
-
     /**
      * Definimos constante con el nombre de la tabla
      */
