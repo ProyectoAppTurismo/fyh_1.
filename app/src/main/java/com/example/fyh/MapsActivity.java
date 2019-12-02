@@ -4,10 +4,8 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.location.Geocoder;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -85,7 +83,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void consultar( String com, String tip, String pre, String afl, String Tipot)
     {
 
-        cursor = dbAdapter2.getCursor(com, tip, pre, afl, Tipot);
+        cursor = dbAdapter2.getCursor(com, tip, afl,pre, Tipot);
         startManagingCursor(cursor);
         destinoAdapter = new CursorAdapter(this, cursor);
         lista.setAdapter(destinoAdapter);

@@ -10,7 +10,7 @@ public class DbAdapter extends Resultados {
     /**
      * Definimos constante con el nombre de la tabla
      */
-    public static final String C_TABLA = "DESTINO" ;
+    public static final String C_TABLA = "DESTINOS" ;
 
     /**
      * Definimos constantes con el nombre de las columnas de la tabla
@@ -35,7 +35,7 @@ public class DbAdapter extends Resultados {
     /**
      * Definimos lista de columnas de la tabla para utilizarla en las consultas a la base de datos
      */
-    private String[] columnas = new String[]{  C_ID, C_NOMBRE, C_COMPANIA, C_TIPO, C_PRECIO, C_AFLUENCIA, C_LINK, C_DESCRIPCION, C_DESCRIPTION, C_LOCALIZACION, C_TIPOTUR} ;
+    private String[] columnas = new String[]{C_NOMBRE, C_DESCRIPCION,C_LOCALIZACION, C_DESCRIPTION, C_LINK} ;
 
     public DbAdapter(Context context )
     {
@@ -60,10 +60,10 @@ public class DbAdapter extends Resultados {
      * Devuelve cursor con todas las columnas de la tabla
      *
      */
-    public Cursor getCursor(String com, String tip, String pre, String afl, String Tipot) throws SQLException
+    public Cursor getCursor(String com, String tip, String afl,String pre, String tipot) throws SQLException
     {
 
-        String seleccionArgs[] = new String []{ com,tip, pre, afl, Tipot};
+        String seleccionArgs[] = new String []{ com,tip, afl,pre, tipot};
         Cursor c = db.query( true, C_TABLA, columnas, seleccion , seleccionArgs, null, null, null, null);
         return c;
     }
