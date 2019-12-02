@@ -15,17 +15,17 @@ public class DbAdapter extends Resultados {
     /**
      * Definimos constantes con el nombre de las columnas de la tabla
      */
-    public static final String C_ID   = "_id";
-    public static final String C_NOMBRE = "d_nombre";
-    public static final String C_COMPANIA = "d_compania";
-    public static final String C_TIPO = "d_tipo";
-    public static final String C_PRECIO = "d_precio";
-    public static final String C_AFLUENCIA = "d_afluencia";
-    public static final String C_FECHA = "d_fecha";
-    public static final String C_DESCRIPCION = "d_descripcion";
-    public static final String C_DESCRIPTION = "d_description";
-    public static final String C_LOCALIZACION = "d_localizacion";
-    public static final String C_TIPOTUR = "d_tipo_turismo";
+    public static final String C_ID   = "id";
+    public static final String C_NOMBRE = "nombre";
+    public static final String C_COMPANIA = "compania";
+    public static final String C_TIPO = "tipo";
+    public static final String C_PRECIO = "precio";
+    public static final String C_AFLUENCIA = "afluencia";
+    public static final String C_DESCRIPCION = "descripcion";
+    public static final String C_DESCRIPTION = "description";
+    public static final String C_LOCALIZACION = "coordenadas";
+    public static final String C_TIPOTUR = "tipo_turismo";
+    public static final String C_LINK = "link";
     private Context contexto;
     private DbHelper dbHelper;
     private SQLiteDatabase db;
@@ -35,7 +35,7 @@ public class DbAdapter extends Resultados {
     /**
      * Definimos lista de columnas de la tabla para utilizarla en las consultas a la base de datos
      */
-    private String[] columnas = new String[]{  C_ID, C_NOMBRE, C_COMPANIA, C_TIPO, C_PRECIO, C_AFLUENCIA, C_FECHA, C_DESCRIPCION, C_DESCRIPTION, C_LOCALIZACION, C_TIPOTUR} ;
+    private String[] columnas = new String[]{  C_ID, C_NOMBRE, C_COMPANIA, C_TIPO, C_PRECIO, C_AFLUENCIA, C_LINK, C_DESCRIPCION, C_DESCRIPTION, C_LOCALIZACION, C_TIPOTUR} ;
 
     public DbAdapter(Context context )
     {
