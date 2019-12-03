@@ -41,7 +41,7 @@ public class CursorAdapter extends android.widget.CursorAdapter
         String nombre = cursor.getString(cursor.getColumnIndex(DbAdapter.C_NOMBRE));
         String descripcion = cursor.getString(cursor.getColumnIndex(DbAdapter.C_DESCRIPCION));
         String resultado = "<html><strong>" +nombre +"</strong>:<br>" + descripcion +
-                "<br><a href=\"https://www.google.es/maps/place/"+nombre+"\" style=\"color:#1240AB\";\"text-decoration:none\";>INFO</a></html>";
+                "<br><a href=\"https://www.google.es/maps/place/"+nombre+"\" style=\"color:#1240AB\";\"text-decoration:none\";>Ver en mapa</a></html>";
         
         tv.setText(
                 Html.fromHtml(resultado));

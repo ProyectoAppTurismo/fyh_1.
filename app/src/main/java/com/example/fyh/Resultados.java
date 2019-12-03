@@ -1,15 +1,11 @@
 package com.example.fyh;
 
 import android.app.ListActivity;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 import static android.widget.Toast.LENGTH_LONG;
 
@@ -37,6 +33,7 @@ public class Resultados extends ListActivity {
         v_compañia= getIntent().getExtras().getString("b_compañia");
         v_tipo= getIntent().getExtras().getString("b_tipo");
         v_afluencia= getIntent().getExtras().getString("b_afluencia");
+        v_precio= getIntent().getExtras().getString("b_precio");
         v_TipoTur= getIntent().getExtras().getString("TipoTur");
 
 

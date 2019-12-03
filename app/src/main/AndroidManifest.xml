@@ -30,20 +30,14 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity2"
-            android:label="@string/title_activity_maps2"></activity>
-        <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="@string/title_activity_maps2"></activity>
         <activity
             android:name=".OpcionesIngles"
             android:label="@string/title_activity_formulario_ingles"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Resultados" />
         <activity android:name=".OpcionesRadioButton" />
-        <activity
-            android:name=".Main2Activity"
-            android:label="@string/title_activity_main2" />
         <activity
             android:name=".PantallaInicio"
             android:label="Find Your Holidays">
