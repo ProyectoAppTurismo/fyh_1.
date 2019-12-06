@@ -8,8 +8,8 @@ import android.util.Log;
 
 class DbHelper extends SQLiteOpenHelper {
 
-    private static int version = 1;
-    private static String name = "DestinossDb" ;
+    private static int version = 6;
+    private static String name = "DESTINO.db" ;
     private static CursorFactory factory = null;
 
     DbHelper(Context context)
@@ -21,7 +21,7 @@ class DbHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db)
     {
         Log.i(this.getClass().toString(), "Creando base de datos");
-
+        db.execSQL("DROP TABLE IF EXISTS DESTINO");
         db.execSQL( "CREATE TABLE DESTINO (" +
                 "_id INTEGER PRIMARY KEY," +
                 "d_nombre TEXT," +
@@ -328,6 +328,7 @@ class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
+        onCreate(db);
 
     }
 }

@@ -95,17 +95,16 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string-array name="tipos">
-        <item>Curioso</item>
         <item>Cultural</item>
-        <item>Sol y playa</item>
-        <item>Religioso</item>
-        <item>Turismo de noche</item>
-        <item>Shopping</item>
         <item>Depotivo</item>
-        <item>Salud</item>
-        <item>Rural</item>
         <item>Festival</item>
-        <item>Eventos</item>
+        <item>Peculiar</item>
+        <item>Rural</item>
+        <item>Salud</item>
+        <item>Sol y playa</item>
+        <item>Shopping</item>
+
+
     </string-array>
     <string name="lista_vacia">sin datos</string>
     <string name="action_settings">Settings</string>
