@@ -50,7 +50,7 @@ public class OpcionesRadioButton extends AppCompatActivity {
             }
         });
 
-        botonMaps.setOnClickListener(new View.OnClickListener(){
+        /*botonMaps.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
 
@@ -63,7 +63,7 @@ public class OpcionesRadioButton extends AppCompatActivity {
                 startActivityForResult(intent, 0);
 
             }
-        });
+        });*/
 
     }
 
